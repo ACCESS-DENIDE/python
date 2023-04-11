@@ -12,6 +12,18 @@ def Ex1():
         print( i,": ",list[i])
 
 def Ex2():
-    list={1:"", 2:"",3:"",4:"",5:"",8:"",10:""}
+    list={1:"aeioulnstr", 2:"dg",3:"bcmp",4:"fhvwy",5:"k",8:"jx",10:"qz"}
+    inp=input()
+    inp=inp.casefold()
+    sum=0
+    for i in inp:
+     for g in list.keys():
+         if(list[g].find(i)!=-1):
+            sum+=g
+    print(sum)
 
-Ex1()
+def Ex3():
+    stud={"Stud1":"russian,english,french", "Stud2":"chineese,russian,french", "Stud3":""}
+    
+
+Ex2()
