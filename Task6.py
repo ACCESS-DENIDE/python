@@ -1,7 +1,7 @@
 from PIL import Image, ImageFilter
 
 
-with Image.open("sobaken.jpg") as img:
+with Image.open("resourses/sobaken.jpg") as img:
         img.load()
 
 def Ex1():
@@ -23,20 +23,20 @@ def Ex2():
 
 def Ex3():
      for i in range(1, 6):
-       f_name=str(i)+".jpg"
+       f_name="resourses/"+str(i)+".jpg"
        with Image.open(f_name) as img:
             img.load()
             new_img = img.filter(ImageFilter.FIND_EDGES)
-            new_img.save("new_" + f_name)
+            new_img.save("new_" +str(i)+".jpg")
             img.close()
 
 def Ex4():
-    with Image.open("watermark.png") as img_water:
+    with Image.open("resourses/watermark.png") as img_water:
         img_water.load()
     img_water=img_water.convert('RGBA')
     
     for i in range(1, 6):
-        f_name=str(i)+".jpg"
+        f_name="resourses/"+str(i)+".jpg"
         with Image.open(f_name) as img:
             img.load()
         img=img.convert('RGBA')
@@ -51,9 +51,9 @@ def Ex4():
         outp=Image.alpha_composite(img, layer)
 
         outp=outp.convert('RGB')
-        outp.save("marked_"+f_name)
+        outp.save("marked_"+str(i)+".jpg")
         img.close()
         
     img_water.close()
 
-Ex4()
+Ex1()
