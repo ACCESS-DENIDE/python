@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 
 def Ex1():
-    with Image.open("postcard.jpg") as img:
+    with Image.open("resourses/postcard.jpg") as img:
         img.load()
 
     cropped_img = img.crop((135, 230, 635, 470))
@@ -14,9 +14,9 @@ def Ex2():
     ans = int(input("Please, enter holiday numb : "))
     filename = card_list[ans]
     name = input("Please enter name: ")
-    with Image.open(filename) as img:
+    with Image.open("resourses/"+filename) as img:
         img.load()
-    font = ImageFont.truetype("arial_bold.ttf", 25)
+    font = ImageFont.truetype("resourses/arial_bold.ttf", 25)
     draw_text = ImageDraw.Draw(img)
     draw_text.text((img.width // 2 - 100, 15),name + ", congratulations!",font=font,fill=('#FAACAC'))
     img.show()
@@ -24,4 +24,4 @@ def Ex2():
     img.close()
 
 
-Ex2()
+Ex1()
