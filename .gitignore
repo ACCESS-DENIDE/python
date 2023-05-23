@@ -7,8 +7,9 @@ new_2.jpg
 new_3.jpg
 new_4.jpg
 new_5.jpg
-
+output
 cropped_postcard.jpg
 
-*.txt
+input.txt
+output.txt
 *.cpp
